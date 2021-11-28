@@ -1,2 +1,2 @@
-# Emmanuel-sBRAND
+# Emmanuel'sBRAND
 The importance of having an online presence and brand for professionals in this day and age cannot be overstated. Having a strong web presence allows for quick and simple access to possibilities. It allows prospective clients and employers to easily examine your work, experience, and future goals. While there are several methods and approaches for developing online brands. I feel that having a personal website + blog where I can provide basic information about myself as well as discuss thoughts with my network may have a significant influence on my career.
