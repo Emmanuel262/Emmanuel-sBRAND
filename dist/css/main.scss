@@ -1063,6 +1063,8 @@ ul {
 .article-sec {
     background-color: $primary-color;
 
+
+
     .article {
         &__nav {
             width: 100%;
@@ -1098,10 +1100,18 @@ ul {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
 
+            @media  screen and (max-width: 682px) {
+                grid-template-rows: repeat(2, 1fr);
+            }
+
             &--article {
                 grid-column: 1 / 10;
                 padding: 1rem 3rem;
                 text-align: center;
+                @media  screen and (max-width: 682px) {
+                    grid-column: 1 / -1;
+                    grid-row: 1 / 2;
+                }
 
                 @media  screen and (max-width: 1000px) {
                     padding: 1rem 1.5rem;
@@ -1149,6 +1159,10 @@ ul {
 
             &--sidebar {
                 grid-column: 10 / -1;
+                @media  screen and (max-width: 682px) {
+                    grid-column: 1 / -1;
+                    grid-row: 2 / -1;
+                }
 
                 .article__nav.explore {
                     flex-direction: column;
