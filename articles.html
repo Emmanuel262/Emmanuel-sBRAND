@@ -14,12 +14,17 @@
 
     <header class="header">
         <nav class="header__nav">
-            <a href="./index.html" class="header__nav--item btn">Home</a>
-            <a href="#" class="header__nav--item btn">About</a>
-            <a href="#" class="header__nav--item btn">Experience</a>
-            <a href="#" class="header__nav--item btn">Projects</a>
-            <a href="#" class="header__nav--item btn">Contact</a>
-            <a href="./articles.html" class="header__nav--item btn">Articles</a>
+            <div class="header__nav--container">
+                <a href="./index.html" class="header__nav--item btn">Home</a>
+                <a href="#" class="header__nav--item btn">About</a>
+                <a href="#" class="header__nav--item btn">Experience</a>
+                <a href="#" class="header__nav--item btn">Projects</a>
+                <a href="#" class="header__nav--item btn">Contact</a>
+                <a href="./articles.html" class="header__nav--item btn">Articles</a>
+            </div>
+            <button class="btn" id="btn-deactive">
+                <img src="./dist/img/bars.svg" alt="">
+            </button>
             <a href="./login.html" class="header__nav--item btn btn__login">Login</a>
         </nav>
         <div class="header__intro">
@@ -234,7 +239,7 @@
 
     
     <footer class="footer">
-        <div class="sec-container">
+        <div class="sec-containers">
             <div class="footer__contents">
                 <div class="footer__nav">
                     <a href="#" class="footer__nav--item">Home</a>
@@ -298,5 +303,7 @@
         </div>
     </footer>
     
+    <script src="./dist/js/main.js"></script>
+
 </body>
 </html>
