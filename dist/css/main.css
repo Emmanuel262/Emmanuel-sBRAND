@@ -1496,6 +1496,7 @@ ul {
   .article-sec .article__container {
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
+    margin-bottom: -400px;
   }
 }
 
@@ -1577,6 +1578,7 @@ ul {
   .article-sec .article__container--sidebar {
     grid-column: 1 / -1;
     grid-row: 2 / -1;
+    height: 70%;
   }
 }
 

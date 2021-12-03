@@ -1089,7 +1089,6 @@ ul {
 
                 @media  screen and (max-width: 878px) {
                     width: max-content;
-                    // width: 100%;
                     padding: .5rem 1rem;
                     text-align: center;
                 }
@@ -1102,6 +1101,7 @@ ul {
 
             @media  screen and (max-width: 682px) {
                 grid-template-rows: repeat(2, 1fr);
+                margin-bottom: -400px;
             }
 
             &--article {
@@ -1162,6 +1162,7 @@ ul {
                 @media  screen and (max-width: 682px) {
                     grid-column: 1 / -1;
                     grid-row: 2 / -1;
+                    height: 70%;
                 }
 
                 .article__nav.explore {
