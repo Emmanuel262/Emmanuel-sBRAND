@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Rancho&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./dist/css/main.css">
+    <title>Emmanuel's Brand || Create Article</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav--container">
+                <a href="./index.html" class="header__nav--item btn">Home</a>
+                <a href="#" class="header__nav--item btn">About</a>
+                <a href="#" class="header__nav--item btn">Experience</a>
+                <a href="#" class="header__nav--item btn">Projects</a>
+                <a href="#" class="header__nav--item btn">Contact</a>
+                <a href="./articles.html" class="header__nav--item btn">Articles</a>
+            </div>
+            <button class="btn" id="btn-deactive">
+                <img src="./dist/img/bars.svg" alt="">
+            </button>
+            <a href="./login.html" class="header__nav--item btn btn__login">Login</a>
+        </nav>
+        <div class="header__intro">
+            <h5 class="primary--header">
+                Hi ASIFIWE Emmanuel, Welcome to your
+                dashboard. You can create, read, update, and
+                delete your articles. You can edit your profile.
+                <span class="focus">Enjoy your stay.</span>
+            </h5>
+        </div>
+
+        <div class="header__profile">
+            <img src="./dist/img/profile-picture.jpg" alt="Profile picture" class="header__profile--img">
+        </div>
+    </header>
+
+    <section class="dashboard-sec">
+        <div class="dashboard--container profile-edit">
+            <h1 class="primary--header">Edit article to meet your needs</h1>
+            <div class="image-edit__container">
+                <input type="file" name="inpFile" id="inptFile">
+                <div class="image-preview" id="imagePreview">
+                    <img src="" alt="Image Preview" class="image-preview__image">
+                    <span class="image-preview__default-text">Image Preview</span>
+                </div>
+            </div>
+            <div class="text-edit__container">
+                <div class="inputs-container">
+                    <input type="text" class="article__title" placeholder="ASIFIWE Emmanuel">
+                    <input type="text" class="article__title" placeholder="emmanuel2koestner@gmail.com">
+                    <input type="text" class="article__title" placeholder="KK 382 ST 11">
+                </div>
+                <div class="inputs-container">
+                    <input type="text" class="article__title" placeholder="Rwanda">
+                    <input type="text" class="article__title" placeholder="Kigali">
+                    <input type="text" class="article__title" placeholder="Niboyi">
+                    <input type="text" class="article__title" placeholder="Niboyi">
+                </div>
+                <div class="inputs-container social-media flex--cont">
+                    <div class="social-media__item flex--cont-col">
+                        <label for="social-media__item" class="social-media__item--title tertiary--header">Facebook</label>
+                        <input type="text" name="social-media__item" class="article__title" placeholder="facebook-link">
+                    </div>
+                    <div class="social-media__item flex--cont-col">
+                        <label for="social-media__item" class="social-media__item--title tertiary--header">Instagram</label>
+                        <input type="text" name="social-media__item" class="article__title" placeholder="instagram-link">
+                    </div>
+                    <div class="social-media__item flex--cont-col">
+                        <label for="social-media__item" class="social-media__item--title tertiary--header">Twitter</label>
+                        <input type="text" name="social-media__item" class="article__title" placeholder="twitter-link">
+                    </div>
+                    <div class="social-media__item flex--cont-col">
+                        <label for="social-media__item" class="social-media__item--title tertiary--header">Github</label>
+                        <input type="text" name="social-media__item" class="article__title" placeholder="github-link">
+                    </div>
+                    <div class="social-media__item flex--cont-col">
+                        <label for="social-media__item" class="social-media__item--title tertiary--header">Linkedln</label>
+                        <input type="text" name="social-media__item" class="article__title" placeholder="linkedln-link">
+                    </div>
+                </div>
+                <textarea name="article__description" id="article__description" class="article__description" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed temporibus et delectus atque perferendis accusamus nihil, adipisci molestiae suscipit voluptates. Veniam quisquam recusandae quod repudiandae totam voluptas officia provident possimus sapiente voluptatem eius facilis corporis, sequi dolor rem fuga reiciendis unde beatae esse praesentium ducimus deserunt. Voluptatem deserunt vitae voluptas expedita, adipisci quas aspernatur explicabo atque id nihil odit quo ipsam labore eum quos consequuntur numquam. Dolor possimus illum odio soluta, ad veniam delectus ipsum dignissimos, dolore minus hic sint ut a suscipit? Animi suscipit accusantium eligendi fugit vel non magni, facere quibusdam asperiores iste exercitationem culpa eveniet repellendus nulla."></textarea>
+            </div>
+            <a href="./dashboard.html" class="btn btn__create move-position">Back</a>
+            <a href="./dashboard.html" class="btn btn__create move-position">Create Article</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="sec-container">
+            <div class="footer__contents">
+                <div class="footer__nav">
+                    <a href="#" class="footer__nav--item">Home</a>
+                    <a href="#" class="footer__nav--item">About</a>
+                    <a href="#" class="footer__nav--item">Experience</a>
+                    <a href="#" class="footer__nav--item">Projects</a>
+                    <a href="#" class="footer__nav--item">Contact</a>
+                    <a href="#" class="footer__nav--item">Articles</a>
+                </div>
+                <div class="footer__navigation-link">
+                    <p class="primary--text">
+                        I, ASIFIWE Emmanuel provides
+                        articles to what I am current doing
+                        especially beneficial projects to the
+                        society, and personal improvement.
+                    </p>
+                    <p class="primary--text">
+                        Click the last item on the left list
+                        called Articles to access who am I.
+                    </p>
+                </div>
+                <div class="footer__reasons">
+                    <h6 class="secondary--header">The reasons to believe in us.</h6>
+                    <p class="primary--text">
+                        Using online platform, we have acquired
+                        necessary skills for helping our clients.
+                    </p>
+                    <p class="primary--text">
+                        Certificates were provided as proof of
+                        completion of those courses. Curious right?.
+                        Click the button below to access different
+                        courses and their certificates.
+                    </p>
+
+                    <div class="btn btn__primary">Learn More</div>
+                </div>
+            </div>
+            <div class="footer__footer">
+                <p class="info-text">We are here for you. don't hesitate to contact me. <span>&#8594;</span></p>
+                <div class="social-contact">
+                    <a href="#" class="btn btn__white">Contact me</a>
+                    <div class="info__social-media">
+                        <a href="#" class="info__social-media--item">
+                            <img src="./dist/img/linkedin.svg" alt="linkedin" class="info__social-media--img">
+                        </a>
+                        <a href="#" class="info__social-media--item">
+                            <img src="./dist/img/github.svg" alt="github" class="info__social-media--img">
+                        </a>
+                        <a href="#" class="info__social-media--item">
+                            <img src="./dist/img/facebook.svg" alt="facebook" class="info__social-media--img">
+                        </a>
+                        <a href="#" class="info__social-media--item">
+                            <img src="./dist/img/instagram.svg" alt="instagram" class="info__social-media--img">
+                        </a>
+                        <a href="#" class="info__social-media--item">
+                            <img src="./dist/img/twitter.svg" alt="twitter" class="info__social-media--img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="./dist/js/main.js"></script>
+
+</body>
+</html>

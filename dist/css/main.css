@@ -166,6 +166,40 @@ ul {
   border: 1px solid #FFFFFF;
 }
 
+.flex--cont,
+.flex--cont-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.flex--cont-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex--cont-col .tertiary--header {
+  margin: .5rem;
+}
+
+.flex--cont-col label {
+  width: 100%;
+  text-align: center;
+}
+
+.flex--cont-col input.article__title {
+  width: 300px;
+}
+
 .sec-container {
   width: 100%;
   height: 450px;
@@ -1838,6 +1872,7 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .dashboard-sec .dashboard-type .btn {
@@ -1846,10 +1881,20 @@ ul {
   text-align: center;
 }
 
+.dashboard-sec .dashboard-type .left-corner {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
 .dashboard-sec .cards {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 2rem;
+}
+
+.dashboard-sec .cards .card {
+  position: relative;
 }
 
 .dashboard-sec .cards .card .btn-types {
@@ -1873,6 +1918,47 @@ ul {
   font-size: 1.3rem;
 }
 
+.dashboard-sec .cards .card.remove {
+  display: none;
+}
+
+.dashboard-sec .cards .card .card__confirm-delete {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 50%;
+  width: 100%;
+  background-color: #212128;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.6rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+}
+
+.dashboard-sec .cards .card .card__confirm-delete div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard-sec .cards .card .card__confirm-delete.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .dashboard-sec .advanced-btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1889,5 +1975,148 @@ ul {
 
 .dashboard-sec .advanced-btns .btn {
   font-size: 1.3rem;
+}
+
+.profile-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.profile-edit .btn__create.move-position {
+  position: absolute;
+  top: 6rem;
+  left: 6rem;
+}
+
+.profile-edit .image-edit__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  width: 300px;
+}
+
+.profile-edit .image-edit__container #inptFile {
+  width: 220px;
+  padding: .5rem;
+  font-family: #0F0F2C;
+  text-align: center;
+  padding-left: 1rem;
+}
+
+.profile-edit .image-edit__container .image-preview {
+  width: 200px;
+  min-height: 250px;
+  border: 2px solid #dddddd;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  color: #ccc;
+  position: relative;
+}
+
+.profile-edit .image-edit__container .image-preview span, .profile-edit .image-edit__container .image-preview__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile-edit .image-edit__container .image-preview span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile-edit .image-edit__container .image-preview__image {
+  display: none;
+}
+
+.profile-edit .text-edit__container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  gap: 1.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-edit .text-edit__container .article__title {
+  width: 30%;
+}
+
+.profile-edit .text-edit__container .inputs-container {
+  text-align: center;
+}
+
+.profile-edit .text-edit__container .inputs-container .article__title {
+  width: 70%;
+  text-align: center;
+}
+
+.profile-edit .text-edit__container .article__title,
+.profile-edit .text-edit__container .article__description {
+  background: #000000;
+  border: 2px solid #FFFFFF;
+  padding: .3rem;
+  font-size: 1.2rem;
+  font-family: "Rancho", cursive;
+  color: #FFFFFF;
+  outline: none;
+  border-radius: .5rem;
+}
+
+.profile-edit .text-edit__container .article__description {
+  width: 70%;
+  height: 200px;
 }
 /*# sourceMappingURL=main.css.map */
