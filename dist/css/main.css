@@ -505,6 +505,98 @@ ul {
 
 .info-section {
   background-color: #0F0F2C;
+  position: relative;
+}
+
+.info-section .btn {
+  color: #FFFFFF;
+}
+
+.info-section .about--modal {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  width: 97%;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-name: slideout;
+          animation-name: slideout;
+  display: none;
+}
+
+.info-section .about--modal.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+.info-section .about--modal-container {
+  gap: 1rem;
+  background-color: #060c2e;
+  padding: 2rem 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[11] 2rem;
+      grid-template-columns: repeat(11, 1fr) 2rem;
+  -ms-grid-rows: (1fr)[3] min-content;
+      grid-template-rows: repeat(3, 1fr) -webkit-min-content;
+      grid-template-rows: repeat(3, 1fr) min-content;
+  position: relative;
+}
+
+.info-section .about--modal-container .primary--text {
+  font-size: 1.1rem;
+}
+
+.info-section .about--modal-container .primary--text.grid-one {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.info-section .about--modal-container .primary--text.grid-two {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 6;
+  grid-column: 6 / 12;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  border-left: 1px solid #FFFFFF;
+  padding-left: 2.5rem;
+}
+
+.info-section .about--modal-container .primary--text.grid-three {
+  grid-column: 1 / -1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.info-section .about--modal-container .primary--text.grid-four {
+  grid-column: 1 / -1;
+  grid-row: 3 / -1;
+  text-align: center;
+}
+
+.info-section .about--modal-container .btn.btn__primary {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .info-section .sec-container {
@@ -2118,5 +2210,49 @@ ul {
 .profile-edit .text-edit__container .article__description {
   width: 70%;
   height: 200px;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    opacity: 0;
+    top: 50%;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    top: 50%;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes slideout {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: 50%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
