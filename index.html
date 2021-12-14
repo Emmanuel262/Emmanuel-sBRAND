@@ -16,10 +16,10 @@
         <nav class="header__nav">
             <div class="header__nav--container">
                 <a href="./index.html" class="header__nav--item btn">Home</a>
-                <a href="#" class="header__nav--item btn">About</a>
-                <a href="#" class="header__nav--item btn">Experience</a>
-                <a href="#" class="header__nav--item btn">Projects</a>
-                <a href="#" class="header__nav--item btn">Contact</a>
+                <a href="#info-section" class="header__nav--item btn">About</a>
+                <a href="#experience-sec" class="header__nav--item btn">Experience</a>
+                <a href="#projects-sec" class="header__nav--item btn">Projects</a>
+                <a href="#contact-sec" class="header__nav--item btn">Contact</a>
                 <a href="./articles.html" class="header__nav--item btn">Articles</a>
             </div>
             <button class="btn" id="btn-deactive">
@@ -29,8 +29,7 @@
         </nav>
         <div class="header__intro">
             <h5 class="primary--header">
-                <span>Hi, I'm ASIFIWE Emmanuel.</span> A great web developer.
-
+                <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
             </h5>
         </div>
 
@@ -39,17 +38,34 @@
         </div>
     </header>
 
-    <section class="info-section">
+    <section class="info-section" id="info-section">
         <div class="sec-container">
             <div class="left-div">
                 <h6 class="primary--header">Who am I ?</h6>
-                <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit cursus turpis
-                    parturient vitae diam. Mauris, aliquet integer egestas orci habitant enim
-                    phasellus amet. Neque etiam nulla venenatis, egestas. Duis etiam porta id
-                    pharetra vulputate viverra diam. Quis gravida pellentesque interdum
-                    euismod cursus tellus. Sit diam dignissim ut pulvinar sed velit accumsan.
+                <p class="primary--text">I am currently a fresh graduate of Electronics and Telecommunication Engineering from the University of Rwanda/College of Science and Technology. My ambition is to extend my acquired expertise and Machine learning Innovation principles by self-study and the application of multiple models in order to assist people all over the world.
                 </p>
-                <a href="#" class="btn btn__primary">Read more</a>
+                <button class="btn btn__primary" id="info-readmore">Read more</button>
+                <div class="about--modal" id="about--modal">
+                    <div class="about--modal-container">
+                        <p class="primary--text grid-one">
+                            The best thing about beginning to visualize the universe as an endless library of ideas is that it is unmistakable evidence that inventing is for all. If someone else would dream something and turn it into a reality, time and again, it's me.
+                        </p>
+                        <p class="primary--text grid-two">
+                            I am currently a fresh graduate of Electronics and Telecommunication Engineering from the University of Rwanda/College of Science and Technology. My ambition is to extend my acquired expertise and Machine learning Innovation principles by self-study and the application of multiple models in order to assist people all over the world.
+                        </p>
+                        <p class="primary--text grid-three">
+                            Health and fitness have long been top priorities around the world, and this is especially true for today's generation. Technology is being used to improve human life on a daily basis. I've learned that in order to accomplish my dream, I'll need to commit to various projects and work at various occupations in companies.
+                            Machine learning Engineer with primary focus on Electronics, Telecommunication and Matlab
+                        </p>
+                        <p class="primary--text grid-four">
+                            Checkout <span>certificates</span>, <span>projects</span>, and <span>Resume</span> to know more about me.
+                        </p>
+
+                        <button class="btn btn__primary" id="btn-deactive--modal">
+                            <img src="./dist/img/close.svg" alt="">
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="right-div">
                 <div class="info-req__container">
@@ -90,7 +106,7 @@
             </div>
         </div>
     </section>
-    <section class="experience-sec">
+    <section class="experience-sec" id="experience-sec">
         <div class="sec-container">
             <h5 class="primary--header">Experience</h5>
             <div class="experience-sec__list">
@@ -112,7 +128,7 @@
         </div>
     </section>
 
-    <section class="projects-sec">
+    <section class="projects-sec" id="projects-sec">
         <div class="sec-container">
             <h5 class="primary--header">Projects</h5>
             <div class="cards">
@@ -141,7 +157,7 @@
         </div>
     </section>
 
-    <section class="contact-sec">
+    <section class="contact-sec" id="contact-sec">
         <div class="sec-container">
             <h5 class="primary--header"> Contact us</h5>
             <div class="left-div">
@@ -173,7 +189,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="sec-containerss">
             <div class="footer__contents">
                 <div class="footer__nav">

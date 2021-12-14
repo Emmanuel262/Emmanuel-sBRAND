@@ -410,6 +410,74 @@ ul {
 // Info section
 .info-section {
     background-color: $primary-color;
+    position: relative;
+
+    .btn {
+        color: $white-color;
+    }
+
+    .about--modal {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        bottom: 0;
+        width: 97%;
+        height: 100%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        justify-content: center;
+        animation-duration: .5s;
+        animation-name: slideout;
+        display: none;
+
+        &.active {
+            display: flex;
+            animation-name: slidein;
+        }
+
+        &-container {
+            gap: 1rem;
+            background-color: rgb(6, 12, 46);
+            padding: 2rem 4rem;
+            display: grid;
+            grid-template-columns: repeat(11, 1fr) 2rem;
+            grid-template-rows: repeat(3, 1fr) min-content;
+
+            .primary--text {
+                font-size: 1.1rem;
+
+                &.grid-one {
+                    grid-column: 1 / 6;
+                    grid-row: 1 / 2;
+                }
+                &.grid-two {
+                    grid-column: 6 / 12;
+                    grid-row: 1 / 2;
+                    border-left: 1px solid $white-color;
+                    padding-left: 2.5rem;
+                }
+                &.grid-three {
+                    grid-column: 1 / -1;
+                    grid-row: 2 / 3;
+                    margin-top: 2rem;
+                    text-align: center;
+                }
+                &.grid-four {
+                    grid-column: 1 / -1;
+                    grid-row: 3 / -1;
+                    text-align: center;
+                }
+            }
+
+            position: relative;
+
+            .btn.btn__primary {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
 
     .sec-container {
         display: grid;
@@ -1484,17 +1552,6 @@ ul {
 }
 
 
-// Media queries
-
-// @media  screen and (max-width: 1200px) {
-//     body {
-//         font-size: 80%;
-//     }
-// }
-
-// Image preview
-
-
 .profile-edit {
     display: flex;
     flex-direction: column;
@@ -1601,5 +1658,27 @@ ul {
             width: 70%;
             height: 200px;
         }
+    }
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+        top: 50%;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+@keyframes slideout {
+    from {
+        opacity: 1;
+        top: 0;
+    }
+
+    to {
+        opacity: 0;
+        top: 50%;
     }
 }
