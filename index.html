@@ -1,260 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Rancho&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./dist/css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./dist/css/main.css" />
     <title>Emmanuel's Brand</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header class="header">
-        <nav class="header__nav">
-            <div class="header__nav--container">
-                <a href="./index.html" class="header__nav--item btn">Home</a>
-                <a href="#info-section" class="header__nav--item btn">About</a>
-                <a href="#experience-sec" class="header__nav--item btn">Experience</a>
-                <a href="#projects-sec" class="header__nav--item btn">Projects</a>
-                <a href="#contact-sec" class="header__nav--item btn">Contact</a>
-                <a href="./articles.html" class="header__nav--item btn">Articles</a>
-            </div>
-            <button class="btn" id="btn-deactive">
-                <img src="./dist/img/bars.svg" alt="">
-            </button>
-            <a href="./login.html" class="header__nav--item btn btn__login">Login</a>
-        </nav>
-        <div class="header__intro">
-            <h5 class="primary--header">
-                <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
-            </h5>
+      <nav class="header__nav">
+        <div class="header__nav--container">
+          <a href="./index.html" class="header__nav--item btn">Home</a>
+          <a href="#info-section" class="header__nav--item btn">About</a>
+          <a href="#experience-sec" class="header__nav--item btn">Experience</a>
+          <a href="#projects-sec" class="header__nav--item btn">Projects</a>
+          <a href="#contact-sec" class="header__nav--item btn">Contact</a>
+          <a href="./articles.html" class="header__nav--item btn">Articles</a>
         </div>
+        <button class="btn" id="btn-deactive">
+          <img src="./dist/img/bars.svg" alt="" />
+        </button>
+        <div class="user-btns">
+          <button class="header__nav--item btn btn__login">
+            Login
+          </button>
+          <a href="#" class="header__nav--item btn user-dashboard">
+            Dashboard
+          </a>
+          <button class="header__nav--item btn user-logout">
+            Logout
+          </button>
+        </div>
+      </nav>
+      <div class="header__intro">
+        <h5 class="primary--header">
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
+        </h5>
+      </div>
 
-        <div class="header__profile">
-            <img src="./dist/img/profile-picture.jpg" alt="Profile picture" class="header__profile--img">
-        </div>
+      <div class="header__profile">
+        <img
+          src="./dist/img/profile-picture.jpg"
+          alt="Profile picture"
+          class="header__profile--img"
+        />
+      </div>
     </header>
 
-    <section class="info-section" id="info-section">
-        <div class="sec-container">
-            <div class="left-div">
-                <h6 class="primary--header">Who am I ?</h6>
-                <p class="primary--text">I am currently a fresh graduate of Electronics and Telecommunication Engineering from the University of Rwanda/College of Science and Technology. My ambition is to extend my acquired expertise and Machine learning Innovation principles by self-study and the application of multiple models in order to assist people all over the world.
-                </p>
-                <button class="btn btn__primary" id="info-readmore">Read more</button>
-                <div class="about--modal" id="about--modal">
-                    <div class="about--modal-container">
-                        <p class="primary--text grid-one">
-                            The best thing about beginning to visualize the universe as an endless library of ideas is that it is unmistakable evidence that inventing is for all. If someone else would dream something and turn it into a reality, time and again, it's me.
-                        </p>
-                        <p class="primary--text grid-two">
-                            I am currently a fresh graduate of Electronics and Telecommunication Engineering from the University of Rwanda/College of Science and Technology. My ambition is to extend my acquired expertise and Machine learning Innovation principles by self-study and the application of multiple models in order to assist people all over the world.
-                        </p>
-                        <p class="primary--text grid-three">
-                            Health and fitness have long been top priorities around the world, and this is especially true for today's generation. Technology is being used to improve human life on a daily basis. I've learned that in order to accomplish my dream, I'll need to commit to various projects and work at various occupations in companies.
-                            Machine learning Engineer with primary focus on Electronics, Telecommunication and Matlab
-                        </p>
-                        <p class="primary--text grid-four">
-                            Checkout <span>certificates</span>, <span>projects</span>, and <span>Resume</span> to know more about me.
-                        </p>
+    <a href="#" class="back-top-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  <section class="login-sec">
+    <div class="sec-containerss">
+        <h5 class="primary--header">Login</h5>
+        <form class="login-form">
+            <p class="tertiary--header">If you are not the owner, you won't have access.</p>
+            <div class="login-form__group">
+                <label for="email" class="login-form__group--label">Enter your email</label>
+                <input type="email" name="email" id="email" class="login-form__group--input">
+            </div>
+            <div class="login-form__group">
+                <label for="password" class="login-form__group--label">Enter your password</label>
+                <input type="password" name="password" id="password" class="login-form__group--input">
+            </div>
+            <button type="submit" class="login-form__btn  btn btn__primary">Login</button>
+            <a href="./dashboard.html" class="tertiary--header focus">forgot your password</a>
 
-                        <button class="btn btn__primary" id="btn-deactive--modal">
-                            <img src="./dist/img/close.svg" alt="">
-                        </button>
-                    </div>
-                </div>
+        </form>
+        <button class="btn btn__primary login-close--btn">
+          <img src="./dist/img/close.svg" alt="" />
+        </button>
+    </div>
+  </section>
+
+    <section class="info-section" id="info-section">
+      <div class="sec-container">
+        <div class="left-div">
+          <h6 class="primary--header">Who am I ?</h6>
+          <p class="primary--text">
+            I am currently a fresh graduate of Electronics and Telecommunication
+            Engineering from the University of Rwanda/College of Science and
+            Technology. My ambition is to extend my acquired expertise and
+            Machine learning Innovation principles by self-study and the
+            application of multiple models in order to assist people all over
+            the world.
+          </p>
+          <button class="btn btn__primary" id="info-readmore">Read more</button>
+          <div class="about--modal" id="about--modal">
+            <div class="about--modal-container">
+              <p class="primary--text grid-one">
+                The best thing about beginning to visualize the universe as an
+                endless library of ideas is that it is unmistakable evidence
+                that inventing is for all. If someone else would dream something
+                and turn it into a reality, time and again, it's me.
+              </p>
+              <p class="primary--text grid-two">
+                Learning is vital in my life. As food feeds my body, information and learning nurture my mind. Knowledge and skills can be gained and my skills expanded to develop future opportunities. This helps me continue to improve and develop, so that I feel empowered and reinforce my self-confidence, which increases the ability to take risks and helps me face problems.
+              </p>
+              <p class="primary--text grid-three">
+                Health and fitness have long been top priorities around the
+                world, and this is especially true for today's generation.
+                Technology is being used to improve human life on a daily basis.
+                I've learned that in order to accomplish my dream, I'll need to
+                commit to various projects and work at various occupations in
+                companies. Machine learning Engineer with primary focus on
+                Electronics, Telecommunication and Matlab
+              </p>
+              <p class="primary--text grid-four">
+                Checkout
+                <a href="#" class="btn">certificates</a> 
+                <a href="#" class="btn">projects</a> 
+                <a href="#" class="btn">Resume</a>to know more about me.
+              </p>
+
+              <button class="btn btn__primary" id="btn-deactive--modal">
+                <img src="./dist/img/close.svg" alt="" />
+              </button>
             </div>
-            <div class="right-div">
-                <div class="info-req__container">
-                    <p class="info-text">
-                        <span>Rwanda</span>
-                        <span>/</span>
-                        <span>Kigali</span>
-                    </p>
-                    <p class="info-text">
-                        <span>Niboyi</span>
-                        <span>/</span>
-                        <span>Gatare</span>
-                    </p>
-                    <p class="info-text">
-                        Kigali kk 382 ST 11
-                    </p>
-                    <p class="info-text">
-                        emmanuel2koestner@gmail.com
-                    </p>
-                    <div class="info__social-media">
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/linkedin.svg" alt="linkedin" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/github.svg" alt="github" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/facebook.svg" alt="facebook" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/instagram.svg" alt="instagram" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/twitter.svg" alt="twitter" class="info__social-media--img">
-                        </a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="right-div">
+          <div class="info-req__container">
+            <p class="info-text">
+              <span>Rwanda</span>
+              <span>/</span>
+              <span>Kigali</span>
+            </p>
+            <p class="info-text">
+              <span>Niboyi</span>
+              <span>/</span>
+              <span>Gatare</span>
+            </p>
+            <p class="info-text">Kigali kk 382 ST 11</p>
+            <p class="info-text">emmanuel2koestner@gmail.com</p>
+            <div class="info__social-media">
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/linkedin.svg"
+                  alt="linkedin"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/github.svg"
+                  alt="github"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/facebook.svg"
+                  alt="facebook"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/instagram.svg"
+                  alt="instagram"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/twitter.svg"
+                  alt="twitter"
+                  class="info__social-media--img"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="experience-sec" id="experience-sec">
-        <div class="sec-container">
-            <h5 class="primary--header">Experience</h5>
-            <div class="experience-sec__list">
-                <button class="btn experience-sec__list--item active" id="experience-1">RBA intern</button>
-                <button class="btn experience-sec__list--item" id="experience-2">School's experience</button>
-                <button class="btn experience-sec__list--item" id="experience-3">Andela ATLP</button>
-            </div>
-            <div class="experience-1">
-                <p class="primary--text experience-1__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit cursus turpis
-                    parturient vitae diam. Mauris, aliquet integer egestas orci habitant enim
-                    phasellus amet. Neque etiam nulla venenatis, egestas. Duis etiam porta id
-                    pharetra vulputate viverra diam. Quis gravida pellentesque interdum
-                    euismod cursus tellus. Sit diam dignissim ut pulvinar sed velit accumsan.
-                </p>
-                <a href="#" class="btn btn__primary">Click to see certificate</a>
-            </div>
-
+      <div class="experiences">
+        <h5 class="primary--header">Experience</h5>
+        <div class="experience-sec__list">
+          <button
+            class="btn experience-sec__list--item active"
+            id="experience-1"
+          >
+            RBA intern
+          </button>
+          <button class="btn experience-sec__list--item" id="experience-2">
+            Self Learning experience
+          </button>
+          <button class="btn experience-sec__list--item" id="experience-3">
+            Andela ATLP
+          </button>
         </div>
+        <div class="experience-container active" id="rba-experience">
+          <h6 class="secondary--header">
+            I was trained By Rwanda Broadcasting Agency Engineers. <span> I rapidly discovered that performing engineering on paper and a computer is not the same as 
+              doing it in real life.</span>
+          </h6>
+
+          <p class="secondary--text">
+              My daily activities was to make sure that broadcasting is going smoothly which is detailed in each departments:
+          </p>
+          <ul class="department--list">
+            <li>
+              <small>Transmission and Energy Engineer</small>
+            </li>
+            <li>
+              <small>Radio Engineer</small>
+            </li>
+            <li>
+              <small>IT</small>
+            </li>
+          </ul>
+          <button class="btn btn__create exp-btn">
+            Click to learn more of each department
+          </button>
+          <a href="#" class="btn btn__create">View Certificate</a>
+
+          <div class="experience__modal-container" id="rba-experience--modal">
+            <div class="experience__department">
+              <h6 class="secondary--header">
+                Transmission and Energy Engineer
+              </h6>
+              <ul class="experience-list-modal">
+                <li>Transmitting prepared signal to the tower before broadcasting.</li>
+                <li>Troubleshooting radio transmitter and receiver devices.</li>
+                <li>Accessing different towers to troubleshoot in case of emergence.</li>
+                <li>Electrical and Electronics installation inside the main branch of RBA and outside to the towers.</li>
+              </ul>
+            </div>
+            <div class="experience__department">
+              <h6 class="secondary--header">
+                Radio Engineer
+              </h6>
+              <ul class="experience-list-modal">
+                <li>
+                  Working as Radio mixers by processing and producing required programs before broadcasting.
+                </li>
+                <li>
+                  Troubleshooting radios, mixers, microphones in case there is a malfunction.
+                </li>
+                <li>
+                  Preparing Events required to be broadcasted.
+                </li>
+              </ul>
+            </div>
+            <div class="experience__department">
+              <h6 class="secondary--header">
+                IT
+              </h6>
+              <ul class="experience-list-modal">
+                <li>
+                  Streaming the program prepared by another department.
+                </li>
+                <li>
+                  Connecting different departments by providing access to different resources inside the house.
+                </li>
+                <li>
+                  Troubleshooting servers, computers, and other devices in case of malfunction.
+                </li>
+
+              </ul>
+
+            </div>
+            <button class="btn btn__primary btn--modal">
+              <img src="./dist/img/close.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="experience-container" id="school-experience">
+          <h6 class="secondary--header">
+            What is great about learning new skills daily?
+          </h6>
+
+          <p class="primary--text">
+            Learning is vital in my life. As food feeds my body, information and learning nurture my mind. Knowledge and skills can be gained and my skills expanded to develop future opportunities. This helps me continue to improve and develop, so that I feel empowered and reinforce my self-confidence, which increases the ability to take risks and helps me face problems.
+          </p>
+          <button class="btn btn__create exp-btn">
+            Click to learn more about programs and certifications.
+          </button>
+
+          <div class="experience__modal-container speci" id="school-experience--modal">
+            <div class="experience__department">
+              <h6 class="secondary--header">Courses and Programs with their Certificates</h6>
+              <ul class="certificate__list">
+                <li class="certificate__list--item">
+                  <span>Mathematics for Machine Learning: Linear Algebra</span>
+                  <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/EU37Q38SDEJS?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Mathematics for Machine Learning: Multivariate Calculus.</span>
+                  <a target="_blank" href="https://coursera.org/share/2af8ebc836cbc2e9c6bd1fbe117e38e0">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Introduction to Git and GitHub. </span>
+                  <a target="_blank" href="https://coursera.org/share/2d83f08232485c8537a398695723c51f">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Introduction to Programming with MATLAB.</span>
+                  <a target="_blank" href="https://coursera.org/share/96c737f38ee546eea4463c371ffee648">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a target="_blank" href="https://coursera.org/share/a9a26fcbdd1bdb4870e058402dda10f1">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Exploratory Data Analysis for Machine Learning. </span>
+                  <a target="_blank" href="https://coursera.org/share/0d06bcd3bd948bc2b717fd193d51723b">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>AWS Machine Learning Foundations.</span>
+                  <a target="_blank" href="https://confirm.udacity.com/4RYSH4UP">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning Onramp.</span>
+                  <a target="_blank" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=c4751f28-98aa-4c3d-a147-d704d16cf115&">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Image Processing Onramp.</span>
+                  <a target="_blank" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=b4fb95cd-6fed-454f-8b8c-a7a7ad2ccc02&">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Signal Processing Onramp.</span>
+                  <a target="_blank" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6d170b74-22f0-466c-81f1-96df2482edb9&">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>OOP with python</span>
+                  <a href="#">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning with Python</span>
+                  <a href="#">certificate</a>
+                </li>
+              </ul>
+            </div>
+            <div class="experience__department">
+              <h6 class="secondary--header">Courses and Programs in progress</h6>
+              <ul class="certificate__list progress">
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+              </ul>
+            </div>
+            <button class="btn btn__primary btn--modal">
+              <img src="./dist/img/close.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="experience-container" id="andela-experience">
+          <h6 class="secondary--header">
+            Increasing knowledge to maximize ability of taking risks through expertise is what I am doing in Andela Technical Leadership Program.
+          </h6>
+          <p class="primary--text">The Andela Technical Leadership Program (formerly known as StackUp) is now a 9 months career Accelerator program implemented by Andela in partnership with the Ministry of ICT and Innovation.</p>
+          <button class="btn btn__create exp-btn">
+            Click to learn more about programs.
+          </button>
+
+          <div class="experience__modal-container special" id="andela-experience--modal">
+            <div class="experience__department">
+              <p class="primary--text">
+                The program aims at empowering Rwandese nationals with the prerequisite software engineering skills to become world-class engineers. It's a blend of technical and soft skills training that is essential for professionals to thrive in any work environment, especially when working with a distributed team.
+              </p>
+            </div>
+            <a href="https://andela.com/engineers/technical-leadership-program-rwanda/" target="_blank" class="btn">Click here to learn more</a>
+            <button class="btn btn__primary btn--modal">
+              <img src="./dist/img/close.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="projects-sec" id="projects-sec">
-        <div class="sec-container">
-            <h5 class="primary--header">Projects</h5>
-            <div class="cards">
-                <div class="card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <button class="btn btn__primary">Read more</button>
-                </div>
-                <div class="card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <button class="btn btn__primary">Read more</button>
-                </div>
-                <div class="card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <button class="btn btn__primary">Read more</button>
-                </div>
-            </div>
+      <div class="sec-container">
+        <h5 class="primary--header">Projects</h5>
+        <div class="cards">
+          <div class="card project-1">
+            <img
+              src="./dist/img/image-1.jpg"
+              alt="Card image"
+              class="card--img"
+            />
+            <p class="primary--text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+              cursus turpis parturient vitae diam.
+            </p>
+            <button class="btn btn__primary project__btn">Read more</button>
+          </div>
+          <div class="card project-2">
+            <img
+              src="./dist/img/image-1.jpg"
+              alt="Card image"
+              class="card--img"
+            />
+            <p class="primary--text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+              cursus turpis parturient vitae diam.
+            </p>
+            <button class="btn btn__primary project__btn">Read more</button>
+          </div>
+          <div class="card project-3">
+            <img
+              src="./dist/img/image-1.jpg"
+              alt="Card image"
+              class="card--img"
+            />
+            <p class="primary--text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+              cursus turpis parturient vitae diam.
+            </p>
+            <button class="btn btn__primary project__btn">Read more</button>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="projects-lists description">
+
+        <div class="projects-descriptions project-1">
+          <div class="project-1 project__description">
+            <h6 class="secondary--header">Project title</h6>
+            <p class="primary--text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+                vitae quibusdam quam inventore veritatis neque quasi fugit
+                temporibus doloremque fuga cum repellat soluta cupiditate,
+                praesentium ab sunt provident deserunt culpa?
+            </p>
+            <p class="primary--text left">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe in
+                autem molestias voluptatum enim perferendis obcaecati, voluptate
+                voluptas error facilis ullam consectetur, harum, commodi magni
+                corporis eum facere suscipit ipsa.
+            </p>
+            <div class="project--images left">
+                <img
+                src="./dist/img/image-1.jpg"
+                alt="Project image"
+                class="main-project__image"
+                />
+                <img
+                src="./dist/img/image-1.jpg"
+                alt="Project image"
+                class="main-project__image"
+                />
+            </div>
+            <p class="primary--text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iure
+                eaque officiis aliquam ab et laudantium porro, ut eius, explicabo
+                dolores. Corrupti a rem quibusdam quaerat provident ullam aut enim
+                voluptate nihil dolores. Atque quidem odit laudantium veritatis
+                natus facilis.
+            </p>
+          </div>
+          <div class="project--others">
+            <h6 class="secondary--header">You may also like:</h6>
+            <ul class="other-projects">
+                <li class="other-projects__item">Project-1</li>
+                <li class="other-projects__item">Project-2</li>
+                <li class="other-projects__item">Project-3</li>
+                <li class="other-projects__item">Project-4</li>
+                <li class="other-projects__item">Project-5</li>
+            </ul>
+          </div>
+  
+          <button class="btn btn__primary btn-deactive--project">
+            <img src="./dist/img/close.svg" alt="" />
+          </button>
+        </div>
+        <div class="projects-descriptions project-2">
+          <div class="project-2 project__description">
+            <h6 class="secondary--header">Project title 2</h6>
+            <p class="primary--text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+                vitae quibusdam quam inventore veritatis neque quasi fugit
+                temporibus doloremque fuga cum repellat soluta cupiditate,
+                praesentium ab sunt provident deserunt culpa?
+            </p>
+            <p class="primary--text left">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe in
+                autem molestias voluptatum enim perferendis obcaecati, voluptate
+                voluptas error facilis ullam consectetur, harum, commodi magni
+                corporis eum facere suscipit ipsa.
+            </p>
+            <div class="project--images left">
+                <img
+                src="./dist/img/image-1.jpg"
+                alt="Project image"
+                class="main-project__image"
+                />
+                <img
+                src="./dist/img/image-1.jpg"
+                alt="Project image"
+                class="main-project__image"
+                />
+            </div>
+            <p class="primary--text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iure
+                eaque officiis aliquam ab et laudantium porro, ut eius, explicabo
+                dolores. Corrupti a rem quibusdam quaerat provident ullam aut enim
+                voluptate nihil dolores. Atque quidem odit laudantium veritatis
+                natus facilis.
+            </p>
+          </div>
+          <div class="project--others">
+            <h6 class="secondary--header">You may also like:</h6>
+            <ul class="other-projects">
+                <li class="other-projects__item">Project-1</li>
+                <li class="other-projects__item">Project-2</li>
+                <li class="other-projects__item">Project-3</li>
+                <li class="other-projects__item">Project-4</li>
+                <li class="other-projects__item">Project-5</li>
+            </ul>
+          </div>
+  
+          <button class="btn btn__primary btn-deactive--project">
+            <img src="./dist/img/close.svg" alt="" />
+          </button>
+        </div>
+        <div class="projects-descriptions project-3">
+          <div class="project-3 project__description">
+            <h6 class="secondary--header">Project title 3</h6>
+            <p class="primary--text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+                vitae quibusdam quam inventore veritatis neque quasi fugit
+                temporibus doloremque fuga cum repellat soluta cupiditate,
+                praesentium ab sunt provident deserunt culpa?
+            </p>
+            <p class="primary--text left">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe in
+                autem molestias voluptatum enim perferendis obcaecati, voluptate
+                voluptas error facilis ullam consectetur, harum, commodi magni
+                corporis eum facere suscipit ipsa.
+            </p>
+            <div class="project--images left">
+                <img
+                src="./dist/img/image-1.jpg"
+                alt="Project image"
+                class="main-project__image"
+                />
+                <img
+                src="./dist/img/image-1.jpg"
+                alt="Project image"
+                class="main-project__image"
+                />
+            </div>
+            <p class="primary--text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iure
+                eaque officiis aliquam ab et laudantium porro, ut eius, explicabo
+                dolores. Corrupti a rem quibusdam quaerat provident ullam aut enim
+                voluptate nihil dolores. Atque quidem odit laudantium veritatis
+                natus facilis.
+            </p>
+          </div>
+          <div class="project--others">
+            <h6 class="secondary--header">Similar projects</h6>
+            <ul class="other-projects">
+                <li class="other-projects__item">Project-1</li>
+                <li class="other-projects__item">Project-2</li>
+                <li class="other-projects__item">Project-3</li>
+                <li class="other-projects__item">Project-4</li>
+                <li class="other-projects__item">Project-5</li>
+            </ul>
+          </div>
+  
+          <button class="btn btn__primary btn-deactive--project">
+            <img src="./dist/img/close.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+</section>
 
     <section class="contact-sec" id="contact-sec">
-        <div class="sec-container">
-            <h5 class="primary--header"> Contact us</h5>
-            <div class="left-div">
-                <h6 class="secondary--header">The reasons to contact us</h6>
-                <p class="primary--text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                    cursus turpis parturient vitae diam. Mauris, aliquet integer
-                    egestas orci habitant enim phasellus amet.
-                </p>
-            </div>
-            <div class="right-div">
-                <form class="form">
-                    <div class="form-group">
-                        <label for="name" class="form-group__label">Your name</label>
-                        <input type="text" name="name" id="name" class="form-group__input">
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-group__label">Your email</label>
-                        <input type="email" name="email" id="email" class="form-group__input">
-                    </div>
-                    <div class="form-group message">
-                        <label for="message" class="form-group__label">Your message</label>
-                        <textarea name="message" id="message" cols="20" rows="5" class="form-group__textarea"></textarea>
-                    </div>
-
-                    <button class="btn btn__primary">Send your message</button>
-                </form>
-            </div>
+      <div class="sec-container">
+        <h5 class="primary--header">Contact us</h5>
+        <div class="left-div">
+          <h6 class="secondary--header">The reasons to contact us</h6>
+          <p class="primary--text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit cursus
+            turpis parturient vitae diam. Mauris, aliquet integer egestas orci
+            habitant enim phasellus amet.
+          </p>
         </div>
+        <div class="right-div">
+          <form class="form">
+            <div class="form-group">
+              <label for="name" class="form-group__label">Your name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-group__input"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-group__label">Your email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-group__input"
+              />
+            </div>
+            <div class="form-group message">
+              <label for="message" class="form-group__label"
+                >Your message</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                cols="20"
+                rows="5"
+                class="form-group__textarea"
+              ></textarea>
+            </div>
+
+            <button class="btn btn__primary">Send your message</button>
+          </form>
+        </div>
+      </div>
     </section>
 
     <footer class="footer" id="footer">
-        <div class="sec-containerss">
-            <div class="footer__contents">
-                <div class="footer__nav">
-                    <a href="#" class="footer__nav--item">Home</a>
-                    <a href="#" class="footer__nav--item">About</a>
-                    <a href="#" class="footer__nav--item">Experience</a>
-                    <a href="#" class="footer__nav--item">Projects</a>
-                    <a href="#" class="footer__nav--item">Contact</a>
-                    <a href="#" class="footer__nav--item">Articles</a>
-                </div>
-                <div class="footer__navigation-link">
-                    <p class="primary--text">
-                        I, ASIFIWE Emmanuel provides
-                        articles to what I am current doing
-                        especially beneficial projects to the
-                        society, and personal improvement.
-                    </p>
-                    <p class="primary--text">
-                        Click the last item on the left list
-                        called Articles to access who am I.
-                    </p>
-                </div>
-                <div class="footer__reasons">
-                    <h6 class="secondary--header">The reasons to believe in us.</h6>
-                    <p class="primary--text">
-                        Using online platform, we have acquired
-                        necessary skills for helping our clients.
-                    </p>
-                    <p class="primary--text">
-                        Certificates were provided as proof of
-                        completion of those courses. Curious right?.
-                        Click the button below to access different
-                        courses and their certificates.
-                    </p>
+      <div class="sec-containerss">
+        <div class="footer__contents">
+          <div class="footer__nav">
+            <a href="#" class="footer__nav--item">Home</a>
+            <a href="#" class="footer__nav--item">About</a>
+            <a href="#" class="footer__nav--item">Experience</a>
+            <a href="#" class="footer__nav--item">Projects</a>
+            <a href="#" class="footer__nav--item">Contact</a>
+            <a href="#" class="footer__nav--item">Articles</a>
+          </div>
+          <div class="footer__navigation-link">
+            <p class="primary--text">
+              I, ASIFIWE Emmanuel provides articles to what I am current doing
+              especially beneficial projects to the society, and personal
+              improvement.
+            </p>
+            <p class="primary--text">
+              Click the last item on the left list called Articles to access who
+              am I.
+            </p>
+          </div>
+          <div class="footer__reasons">
+            <h6 class="secondary--header">The reasons to believe in us.</h6>
+            <p class="primary--text">
+              Using online platform, we have acquired necessary skills for
+              helping our clients.
+            </p>
+            <p class="primary--text">
+              Certificates were provided as proof of completion of those
+              courses. Curious right?. Click the button below to access
+              different courses and their certificates.
+            </p>
 
-                    <div class="btn btn__primary">Learn More</div>
-                </div>
-            </div>
-            <div class="footer__footer">
-                <p class="info-text">We are here for you. don't hesitate to contact me. <span>&#8594;</span></p>
-                <div class="social-contact">
-                    <a href="#" class="btn btn__white">Contact me</a>
-                    <div class="info__social-media">
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/linkedin.svg" alt="linkedin" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/github.svg" alt="github" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/facebook.svg" alt="facebook" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/instagram.svg" alt="instagram" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/twitter.svg" alt="twitter" class="info__social-media--img">
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div class="btn btn__primary">Learn More</div>
+          </div>
         </div>
+        <div class="footer__footer">
+          <p class="info-text">
+            We are here for you. don't hesitate to contact me.
+            <span>&#8594;</span>
+          </p>
+          <div class="social-contact">
+            <a href="#" class="btn btn__white">Contact me</a>
+            <div class="info__social-media">
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/linkedin.svg"
+                  alt="linkedin"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/github.svg"
+                  alt="github"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/facebook.svg"
+                  alt="facebook"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/instagram.svg"
+                  alt="instagram"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/twitter.svg"
+                  alt="twitter"
+                  class="info__social-media--img"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-    
 
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="./dist/js/firebaseConf.js"></script>
+    <script src="./dist/js/authentication.js"></script>
+    <script src="./dist/js/database.js"></script>
     <script src="./dist/js/main.js"></script>
-</body>
+  </body>
 </html>
