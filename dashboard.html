@@ -1,241 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Rancho&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./dist/css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/main.css" />
     <title>Emmanuel's Brand</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header class="header">
-        <nav class="header__nav">
-            <div class="header__nav--container">
-                <a href="./index.html" class="header__nav--item btn">Home</a>
-                <a href="#" class="header__nav--item btn">About</a>
-                <a href="#" class="header__nav--item btn">Experience</a>
-                <a href="#" class="header__nav--item btn">Projects</a>
-                <a href="#" class="header__nav--item btn">Contact</a>
-                <a href="./articles.html" class="header__nav--item btn">Articles</a>
-            </div>
-            <button class="btn" id="btn-deactive">
-                <img src="./dist/img/bars.svg" alt="">
-            </button>
-            <a href="./login.html" class="header__nav--item btn btn__login">Login</a>
-        </nav>
-        <div class="header__intro">
-            <h5 class="primary--header">
-                Hi ASIFIWE Emmanuel, Welcome to your
-                dashboard. You can create, read, update, and
-                delete your articles. You can edit your profile.
-                <span class="focus">Enjoy your stay.</span>
-            </h5>
+      <nav class="header__nav">
+        <div class="header__nav--container">
+          <a href="./index.html" class="header__nav--item btn">Home</a>
+          <a href="#info-section" class="header__nav--item btn">About</a>
+          <a href="#experience-sec" class="header__nav--item btn">Experience</a>
+          <a href="#projects-sec" class="header__nav--item btn">Projects</a>
+          <a href="#contact-sec" class="header__nav--item btn">Contact</a>
+          <a href="./articles.html" class="header__nav--item btn">Articles</a>
         </div>
+        <button class="btn" id="btn-deactive">
+          <img src="./dist/img/bars.svg" alt="" />
+        </button>
+        <div class="user-btns">
+          <a href="#" class="header__nav--item btn user-dashboard">
+            Dashboard
+          </a>
+          <button class="header__nav--item btn user-logout">Logout</button>
+        </div>
+      </nav>
+      <div class="header__intro dashboard">
+        <h5 class="primary--header">
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
+        </h5>
+      </div>
 
-        <div class="header__profile">
-            <img src="./dist/img/profile-picture.jpg" alt="Profile picture" class="header__profile--img">
-        </div>
+      <div class="header__profile">
+        <img
+          src="./dist/img/profile-picture.jpg"
+          alt="Profile picture"
+          class="header__profile--img"
+        />
+      </div>
     </header>
 
+    <a href="#" class="back-top-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
     <section class="dashboard-sec">
-        <div class="dashboard--container">
-            <div class="dashboard-type">
-                <a href="#" class="btn btn__primary btn__create">Edit your profile</a>
-                <a href="#" class="btn btn__primary btn__outline">Articles</a>
-                <a href="#" class="btn btn__primary btn__create">Queries</a>
-                <a href="#" class="btn btn__primary btn__create">Experiences</a>
-                <a href="#" class="btn btn__primary btn__create">Projects</a>
-                <a href="#" class="btn btn__primary btn__create left-corner">articles</a>
-            </div>
-            <div class="cards" id="dashboard-cards">
-                <div class="card" id="dashboard-card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <div class="btn-types">
-                        <a href="./articles.html" class="btn btn__read">Read</a>
-                        <a href="./dashboard-edit-article.html" class="btn btn__edit">Edit</a>
-                        <button class="btn btn__delete">Delete</button>
-                    </div>
-                    <div class="card__confirm-delete">
-                        <h6 class="secondary--text">Are you sure about deleting????</h6>
-                        <div>
-                            <button class="btn__delete btn">Delete</button>
-                        <button class="btn btn__create">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" id="dashboard-card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <div class="btn-types">
-                        <a href="./articles.html" class="btn btn__read">Read</a>
-                        <a href="./dashboard-edit-article.html" class="btn btn__edit">Edit</a>
-                        <button class="btn btn__delete">Delete</button>
-                    </div>
-                    <div class="card__confirm-delete">
-                        <h6 class="secondary--text">Are you sure about deleting????</h6>
-                        <div>
-                            <button class="btn__delete btn">Delete</button>
-                        <button class="btn btn__create">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" id="dashboard-card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <div class="btn-types">
-                        <a href="./articles.html" class="btn btn__read">Read</a>
-                        <a href="./dashboard-edit-article.html" class="btn btn__edit">Edit</a>
-                        <button class="btn btn__delete">Delete</button>
-                    </div>
-                    <div class="card__confirm-delete">
-                        <h6 class="secondary--text">Are you sure about deleting????</h6>
-                        <div>
-                            <button class="btn__delete btn">Delete</button>
-                        <button class="btn btn__create">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" id="dashboard-card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <div class="btn-types">
-                        <a href="./articles.html" class="btn btn__read">Read</a>
-                        <a href="./dashboard-edit-article.html" class="btn btn__edit">Edit</a>
-                        <button class="btn btn__delete">Delete</button>
-                    </div>
-                    <div class="card__confirm-delete">
-                        <h6 class="secondary--text">Are you sure about deleting????</h6>
-                        <div>
-                            <button class="btn__delete btn">Delete</button>
-                        <button class="btn btn__create">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" id="dashboard-card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <div class="btn-types">
-                        <a href="./articles.html" class="btn btn__read">Read</a>
-                        <a href="./dashboard-edit-article.html" class="btn btn__edit">Edit</a>
-                        <button class="btn btn__delete">Delete</button>
-                    </div>
-                    <div class="card__confirm-delete">
-                        <h6 class="secondary--text">Are you sure about deleting????</h6>
-                        <div>
-                            <button class="btn__delete btn">Delete</button>
-                        <button class="btn btn__create">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" id="dashboard-card">
-                    <img src="./dist/img/image-1.jpg" alt="Card image" class="card--img">
-                    <p class="primary--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                        cursus turpis parturient vitae diam. 
-                    </p>
-                    <div class="btn-types">
-                        <a href="./articles.html" class="btn btn__read">Read</a>
-                        <a href="./dashboard-edit-article.html" class="btn btn__edit">Edit</a>
-                        <button class="btn btn__delete">Delete</button>
-                    </div>
-                    <div class="card__confirm-delete">
-                        <h6 class="secondary--text">Are you sure about deleting????</h6>
-                        <div>
-                            <button class="btn__delete btn">Delete</button>
-                        <button class="btn btn__create">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="advanced-btns">
-                <a href="#" class="btn btn__primary">Load More articles</a>
-                <a href="#" class="btn btn__primary btn__create">Crete new article</a>
-            </div>
+      <div class="dashboard--container">
+        <div class="dashboard-type">
+          <a href="#" class="btn btn__primary btn__create">Edit your profile</a>
+          <a href="#" class="btn btn__primary btn__outline">Articles</a>
+          <a href="#" class="btn btn__primary btn__create">Queries</a>
+          <a href="#" class="btn btn__primary btn__create">Experiences</a>
+          <a href="#" class="btn btn__primary btn__create">Projects</a>
+          <a href="#" class="btn btn__primary btn__create left-corner"
+            >articles</a
+          >
         </div>
+        <div class="cards" id="dashboard-cards"></div>
+        <div class="advanced-btns">
+          <a href="#" class="btn btn__primary">Load More articles</a>
+          <button class="btn btn__primary btn__create dashboard--create-btn">
+            Crete new article
+          </button>
+        </div>
+      </div>
     </section>
-
-    <footer class="footer">
-        <div class="sec-container">
-            <div class="footer__contents">
-                <div class="footer__nav">
-                    <a href="#" class="footer__nav--item">Home</a>
-                    <a href="#" class="footer__nav--item">About</a>
-                    <a href="#" class="footer__nav--item">Experience</a>
-                    <a href="#" class="footer__nav--item">Projects</a>
-                    <a href="#" class="footer__nav--item">Contact</a>
-                    <a href="#" class="footer__nav--item">Articles</a>
-                </div>
-                <div class="footer__navigation-link">
-                    <p class="primary--text">
-                        I, ASIFIWE Emmanuel provides
-                        articles to what I am current doing
-                        especially beneficial projects to the
-                        society, and personal improvement.
-                    </p>
-                    <p class="primary--text">
-                        Click the last item on the left list
-                        called Articles to access who am I.
-                    </p>
-                </div>
-                <div class="footer__reasons">
-                    <h6 class="secondary--header">The reasons to believe in us.</h6>
-                    <p class="primary--text">
-                        Using online platform, we have acquired
-                        necessary skills for helping our clients.
-                    </p>
-                    <p class="primary--text">
-                        Certificates were provided as proof of
-                        completion of those courses. Curious right?.
-                        Click the button below to access different
-                        courses and their certificates.
-                    </p>
-
-                    <div class="btn btn__primary">Learn More</div>
-                </div>
-            </div>
-            <div class="footer__footer">
-                <p class="info-text">We are here for you. don't hesitate to contact me. <span>&#8594;</span></p>
-                <div class="social-contact">
-                    <a href="#" class="btn btn__white">Contact me</a>
-                    <div class="info__social-media">
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/linkedin.svg" alt="linkedin" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/github.svg" alt="github" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/facebook.svg" alt="facebook" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/instagram.svg" alt="instagram" class="info__social-media--img">
-                        </a>
-                        <a href="#" class="info__social-media--item">
-                            <img src="./dist/img/twitter.svg" alt="twitter" class="info__social-media--img">
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="dashboard-new-design">
+      <div class="dashboard--container profile-edit">
+        <h1 class="primary--header">Edit article to meet your needs</h1>
+        <div class="image-edit__container">
+          <input type="file" name="inpFile" id="inptFile" />
+          <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview__image" />
+            <span class="image-preview__default-text">Image Preview</span>
+          </div>
         </div>
+        <div class="text-edit__container">
+          <input
+            type="text"
+            class="article__title"
+            placeholder="article title"
+          />
+          <textarea
+            id="article__description"
+            class="article__description"
+            name="article__description"
+            placeholder="Please enter your input text"
+          >
+          </textarea>
+        </div>
+        <a
+          href="./dashboard.html"
+          class="btn btn__create move-position back-btn-dash"
+          >Back</a
+        >
+        <button class="btn btn__create dashboard--update-btn">
+          Update Article
+        </button>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="sec-containerss">
+        <div class="footer__contents">
+          <div class="footer__nav">
+            <a href="#" class="footer__nav--item">Home</a>
+            <a href="#" class="footer__nav--item">About</a>
+            <a href="#" class="footer__nav--item">Experience</a>
+            <a href="#" class="footer__nav--item">Projects</a>
+            <a href="#" class="footer__nav--item">Contact</a>
+            <a href="#" class="footer__nav--item">Articles</a>
+          </div>
+          <div class="footer__navigation-link">
+            <p class="primary--text">
+              I, ASIFIWE Emmanuel provides articles to what I am current doing
+              especially beneficial projects to the society, and personal
+              improvement.
+            </p>
+            <p class="primary--text">
+              Click the last item on the left list called Articles to access who
+              am I.
+            </p>
+          </div>
+          <div class="footer__reasons">
+            <h6 class="secondary--header">The reasons to believe in us.</h6>
+            <p class="primary--text">
+              Using online platform, we have acquired necessary skills for
+              helping our clients.
+            </p>
+            <p class="primary--text">
+              Certificates were provided as proof of completion of those
+              courses. Curious right?. Click the button below to access
+              different courses and their certificates.
+            </p>
+
+            <div class="btn btn__primary">Learn More</div>
+          </div>
+        </div>
+        <div class="footer__footer">
+          <p class="info-text">
+            We are here for you. don't hesitate to contact me.
+            <span>&#8594;</span>
+          </p>
+          <div class="social-contact">
+            <a href="#" class="btn btn__white">Contact me</a>
+            <div class="info__social-media">
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/linkedin.svg"
+                  alt="linkedin"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/github.svg"
+                  alt="github"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/facebook.svg"
+                  alt="facebook"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/instagram.svg"
+                  alt="instagram"
+                  class="info__social-media--img"
+                />
+              </a>
+              <a href="#" class="info__social-media--item">
+                <img
+                  src="./dist/img/twitter.svg"
+                  alt="twitter"
+                  class="info__social-media--img"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-    
 
-    <script src="./dist/js/main.js"></script>
-
-</body>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="./dist/js/firebaseConf.js"></script>
+    <script
+      src="https://cdn.tiny.cloud/1/uxw88gysnnwhadan1yuu73x45eg9mypgqxfejq6e81gp32l3/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <!-- <script src="./dist/js/authentication.js"></script> -->
+    <script src="./dist/js/dashboard.js"></script>
+    <script src="./dist/js/database.js"></script>
+    <!-- <script src="./dist/js/main.js"></script> -->
+    <script src="./dist/js/tinyMCE.js"></script>
+    <script src="./dist/js/fileInput.js"></script>
+  </body>
 </html>
