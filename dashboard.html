@@ -66,7 +66,9 @@
         </div>
         <div class="cards" id="dashboard-cards"></div>
         <div class="advanced-btns">
-          <a href="#" class="btn btn__primary">Load More articles</a>
+          <button class="btn btn__primary" id="load-more">
+            Load More articles
+          </button>
           <button class="btn btn__primary btn__create dashboard--create-btn">
             Crete new article
           </button>
@@ -74,12 +76,23 @@
       </div>
     </section>
     <div class="dashboard-new-design">
-      <div class="dashboard--container profile-edit">
+      <form class="dashboard--container profile-edit">
         <h1 class="primary--header">Edit article to meet your needs</h1>
         <div class="image-edit__container">
-          <input type="file" name="inpFile" id="inptFile" />
+          <!-- <input type="file" name="inpFile" id="inptFile" /> -->
+          <button type="button" class="inptFile" id="inptFile">
+            Select image
+          </button>
+          <button type="button" class="upload-test" id="upload-test">
+            upload Image
+          </button>
           <div class="image-preview" id="imagePreview">
-            <img src="" alt="Image Preview" class="image-preview__image" />
+            <img
+              src=""
+              alt="Image Preview"
+              class="image-preview__image"
+              id="image-preview__image"
+            />
             <span class="image-preview__default-text">Image Preview</span>
           </div>
         </div>
@@ -87,6 +100,7 @@
           <input
             type="text"
             class="article__title"
+            id="article__title"
             placeholder="article title"
           />
           <textarea
@@ -102,10 +116,14 @@
           class="btn btn__create move-position back-btn-dash"
           >Back</a
         >
-        <button class="btn btn__create dashboard--update-btn">
-          Update Article
+        <button
+          type="submit"
+          class="btn btn__create dashboard--update-btn"
+          id="dashboard--update-btn"
+        >
+          Create Article
         </button>
-      </div>
+      </form>
     </div>
     <footer class="footer">
       <div class="sec-containerss">
@@ -196,6 +214,8 @@
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
+
     <script src="./dist/js/firebaseConf.js"></script>
     <script
       src="https://cdn.tiny.cloud/1/uxw88gysnnwhadan1yuu73x45eg9mypgqxfejq6e81gp32l3/tinymce/5/tinymce.min.js"
@@ -206,6 +226,6 @@
     <script src="./dist/js/database.js"></script>
     <!-- <script src="./dist/js/main.js"></script> -->
     <script src="./dist/js/tinyMCE.js"></script>
-    <script src="./dist/js/fileInput.js"></script>
+    <!-- <script src="./dist/js/fileInput.js"></script> -->
   </body>
 </html>

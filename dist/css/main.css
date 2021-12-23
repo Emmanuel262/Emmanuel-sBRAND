@@ -1339,6 +1339,9 @@ button.btn {
 
 .cards .card img {
   width: 100%;
+  height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cards .card .btn {
@@ -2447,6 +2450,7 @@ section.login-sec .sec-containerss .login-form .focus {
   width: 70%;
   padding-top: 1rem;
   padding-bottom: 2rem;
+  z-index: 100000;
   display: none;
 }
 
