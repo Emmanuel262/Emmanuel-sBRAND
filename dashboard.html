@@ -64,7 +64,110 @@
             >articles</a
           >
         </div>
-        <div class="cards" id="dashboard-cards"></div>
+        <div class="cards" id="dashboard-cards">
+          <!-- <div class="card">
+            <img
+              src="./dist/img/image-1.jpg"
+              alt="Card image"
+              class="card--img"
+            />
+            <p class="primary--text dashboardText">Article summary</p>
+            <div class="btn-types">
+              <a href="./articles.html" class="btn btn__read">Read</a>
+              <button
+                class="btn btn__edit edit-article"
+                data-id="${
+                d.id
+              }"
+                data-name="${d.data().articleImgName}"
+              >
+                Edit
+              </button>
+              <button class="btn btn__delete">Delete</button>
+            </div>
+            <div class="card__confirm-delete">
+              <h6 class="secondary--text">Are you sure about deleting????</h6>
+              <div>
+                <button
+                  data-id="${d.id}"
+                  data-name="${d.data().articleImgName}"
+                  class="btn__delete btn"
+                >
+                  Delete
+                </button>
+                <button class="btn btn__create">Cancel</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./dist/img/image-1.jpg"
+              alt="Card image"
+              class="card--img"
+            />
+            <p class="primary--text dashboardText">Article summary</p>
+            <div class="btn-types">
+              <a href="./articles.html" class="btn btn__read">Read</a>
+              <button
+                class="btn btn__edit edit-article"
+                data-id="${
+                d.id
+              }"
+                data-name="${d.data().articleImgName}"
+              >
+                Edit
+              </button>
+              <button class="btn btn__delete">Delete</button>
+            </div>
+            <div class="card__confirm-delete">
+              <h6 class="secondary--text">Are you sure about deleting????</h6>
+              <div>
+                <button
+                  data-id="${d.id}"
+                  data-name="${d.data().articleImgName}"
+                  class="btn__delete btn"
+                >
+                  Delete
+                </button>
+                <button class="btn btn__create">Cancel</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./dist/img/image-1.jpg"
+              alt="Card image"
+              class="card--img"
+            />
+            <p class="primary--text dashboardText">Article summary</p>
+            <div class="btn-types">
+              <a href="./articles.html" class="btn btn__read">Read</a>
+              <button
+                class="btn btn__edit edit-article"
+                data-id="${
+                d.id
+              }"
+                data-name="${d.data().articleImgName}"
+              >
+                Edit
+              </button>
+              <button class="btn btn__delete">Delete</button>
+            </div>
+            <div class="card__confirm-delete">
+              <h6 class="secondary--text">Are you sure about deleting????</h6>
+              <div>
+                <button
+                  data-id="${d.id}"
+                  data-name="${d.data().articleImgName}"
+                  class="btn__delete btn"
+                >
+                  Delete
+                </button>
+                <button class="btn btn__create">Cancel</button>
+              </div>
+            </div>
+          </div> -->
+        </div>
         <div class="advanced-btns">
           <button class="btn btn__primary" id="load-more">
             Load More articles
@@ -76,7 +179,7 @@
       </div>
     </section>
     <div class="dashboard-new-design">
-      <form class="dashboard--container profile-edit">
+      <form class="dashboard--container profile-edit" id="blog-create-edit">
         <h1 class="primary--header">Edit article to meet your needs</h1>
         <div class="image-edit__container">
           <!-- <input type="file" name="inpFile" id="inptFile" /> -->
@@ -211,21 +314,13 @@
       </div>
     </footer>
 
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
-
-    <script src="./dist/js/firebaseConf.js"></script>
     <script
       src="https://cdn.tiny.cloud/1/uxw88gysnnwhadan1yuu73x45eg9mypgqxfejq6e81gp32l3/tinymce/5/tinymce.min.js"
       referrerpolicy="origin"
     ></script>
-    <!-- <script src="./dist/js/authentication.js"></script> -->
-    <script src="./dist/js/dashboard.js"></script>
-    <script src="./dist/js/database.js"></script>
-    <!-- <script src="./dist/js/main.js"></script> -->
     <script src="./dist/js/tinyMCE.js"></script>
+    <script src="./dist/js/views.js"></script>
+    <script src="./dist/js/user-dashboard.js"></script>
     <!-- <script src="./dist/js/fileInput.js"></script> -->
   </body>
 </html>
