@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./dist/css/main.css" />
+    <link id="theme-style" rel="stylesheet" href="">
     <title>Emmanuel's Brand</title>
   </head>
   <body>
@@ -51,7 +52,7 @@
 
       <div class="header__profile">
         <img
-          src="./dist/img/profile-picture.jpg"
+          src="./dist/img/profile-picture.png"
           alt="Profile picture"
           class="header__profile--img"
         />
@@ -731,8 +732,16 @@
         </div>
       </div>
     </footer>
+    <div class="available-themes">
+      <div class="theme__list">
+        <div class="theme__list--item white btn theme-btn" id="white-theme" data-mode="white-mode">white mode</div>
+        <div class="theme__list--item black btn theme-btn" id="black-theme" data-mode="black-mode">black mode</div>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>
     <script src="./dist/js/main.js"></script>
     <script src="./dist/js/query.js"></script>
+    <script src="./dist/js/theme-js.js"></script>
+
   </body>
 </html>
