@@ -1,0 +1,176 @@
+body {
+  color: #000000;
+}
+
+button.btn,
+.btn,
+a {
+  color: #000000;
+}
+
+button.btn.back-top-top,
+.btn.back-top-top,
+a.back-top-top {
+  background-color: #363636;
+}
+
+.header {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.btn {
+  background-color: white;
+  -webkit-box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+          box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+}
+
+.btn__primary {
+  color: #000000;
+}
+
+.header__nav #btn-deactive {
+  background-color: #000000;
+}
+
+.info-section {
+  background-color: white;
+}
+
+.info-section .btn {
+  color: #000000;
+}
+
+.info-section .sec-container .right-div .info-req__container {
+  -webkit-box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+          box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+}
+
+.info-section .sec-container .right-div .info-req__container .info-text {
+  color: #ffffff;
+}
+
+.info-section .about--modal-container {
+  background-color: #f2f2f2;
+}
+
+.info-section .about--modal-container .btn__primary {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.info-section .about--modal-container .primary--text.grid-four .btn {
+  background-color: #ffffff;
+}
+
+.experience-sec {
+  background-color: #f2f2f2;
+}
+
+.experience-sec__list .btn {
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.experience-sec__list .btn.active {
+  background-color: #a3a3a3;
+  color: #ffffff;
+}
+
+.experience-sec .experience-container .experience__modal-container {
+  background-color: white;
+  -webkit-box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+          box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+}
+
+.experience-sec .experience-container .experience__modal-container .btn--modal {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.projects-sec {
+  background-color: white;
+}
+
+.cards .card {
+  -webkit-box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+          box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+  border: none;
+}
+
+.cards .card .btn {
+  color: #000000;
+}
+
+.contact-sec {
+  background-color: #f2f2f2;
+}
+
+.form {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.form-group__input, .form-group__textarea {
+  background-color: #ffffff;
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+  color: #000000;
+}
+
+.form-group__input:active, .form-group__input:hover, .form-group__textarea:active, .form-group__textarea:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.form .btn {
+  color: #000000;
+}
+
+.footer {
+  background-color: white;
+}
+
+.footer__footer {
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer__footer .social-contact .info__social-media {
+  background-color: rgba(10, 35, 56, 0.883);
+  padding: 0.2rem 1rem;
+}
+
+.footer .btn {
+  background-color: #f2f2f2;
+}
+
+.article-sec {
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.article-sec .article__container--sidebar {
+  -webkit-box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+          box-shadow: 0 0.1rem 0.2rem rgba(104, 104, 110, 0.3);
+}
+
+.article-sec .article__container--sidebar .article__nav.explore .btn {
+  margin-bottom: 0.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.thank-container {
+  background-color: #f2f2f2;
+}
+
+.thank-container .center-container {
+  background-color: white;
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.thank-container .center-container .primary--header::after {
+  background-color: #000000;
+}
+
+.thank-container .btn {
+  background-color: white;
+  color: #000000;
+}
+/*# sourceMappingURL=default.css.map */

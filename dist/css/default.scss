@@ -1,0 +1,209 @@
+$primary-color: rgb(255, 255, 255);
+$secondary-color: rgb(242, 242, 242);
+$tertiary-color: rgb(230, 231, 231);
+$tertiary-color-sec: rgb(209, 209, 209);
+$tertiary-secondary-color: rgb(54, 54, 54);
+$tertiary-tertiary-color: rgb(172, 172, 172);
+$quadriple-color: rgb(163, 163, 163);
+$input-color: rgba(104, 104, 110, 0.88);
+$editButton-color: #12331a;
+$deleteButton-color: #810a02;
+$readButton-color: rgba(153, 155, 30, 89%);
+$createButton-color: #0e4a76;
+$white-color: #ffffff;
+$white-color-sec: #ffffff41;
+$black-color: #000000;
+
+body {
+  color: $black-color;
+}
+
+button.btn,
+.btn,
+a {
+  color: $black-color;
+
+  &.back-top-top {
+    background-color: $tertiary-secondary-color;
+  }
+}
+
+.header {
+  background-color: $secondary-color;
+  color: $black-color;
+}
+
+.btn {
+  background-color: $primary-color;
+  box-shadow: 0 0.1rem 0.2rem rgba($input-color, 0.3);
+
+  &__primary {
+    color: $black-color;
+  }
+}
+
+.header__nav {
+  #btn-deactive {
+    background-color: $black-color;
+  }
+}
+
+.info-section {
+  background-color: $primary-color;
+
+  .btn {
+    color: $black-color;
+  }
+
+  .sec-container {
+    .right-div {
+      .info-req__container {
+        box-shadow: 0 0.1rem 0.2rem rgba($input-color, 0.3);
+        .info-text {
+          color: $white-color;
+        }
+      }
+    }
+  }
+
+  .about--modal-container {
+    background-color: $secondary-color;
+
+    .btn {
+      &__primary {
+        background-color: rgba($black-color, 0.9);
+      }
+    }
+
+    .primary--text {
+      &.grid-four {
+        .btn {
+          background-color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+.experience-sec {
+  background-color: $secondary-color;
+
+  &__list {
+    .btn {
+      color: $black-color;
+      border: 1px solid rgba($black-color, 0.1);
+
+      &.active {
+        background-color: $quadriple-color;
+        color: $white-color;
+      }
+    }
+  }
+
+  .experience-container {
+    .experience__modal-container {
+      background-color: $primary-color;
+      box-shadow: 0 0.1rem 0.2rem rgba($input-color, 0.3);
+
+      .btn--modal {
+        background-color: rgba($black-color, 0.9);
+      }
+    }
+  }
+}
+
+.projects-sec {
+  background-color: $primary-color;
+}
+
+.cards .card {
+  box-shadow: 0 0.1rem 0.2rem rgba($input-color, 0.3);
+  border: none;
+
+  .btn {
+    color: $black-color;
+  }
+}
+
+.contact-sec {
+  background-color: $secondary-color;
+}
+
+.form {
+  background-color: $primary-color;
+  border: 1px solid rgba($black-color, 0.2);
+
+  &-group {
+    &__input,
+    &__textarea {
+      background-color: $white-color;
+      outline: 1px solid rgba($black-color, 0.2);
+      color: $black-color;
+
+      &:active,
+      &:hover {
+        border: 1px solid rgba($black-color, 0.2);
+      }
+    }
+  }
+
+  .btn {
+    color: $black-color;
+  }
+}
+
+.footer {
+  background-color: $primary-color;
+
+  &__footer {
+    border-top: 2px solid rgba($black-color, 0.1);
+
+    .social-contact {
+      .info__social-media {
+        background-color: rgba(10, 35, 56, 0.883);
+        padding: 0.2rem 1rem;
+      }
+    }
+  }
+
+  .btn {
+    background-color: $secondary-color;
+  }
+}
+
+// // Article section
+.article-sec {
+  background-color: $primary-color;
+  border-bottom: 1px solid rgba($black-color, 0.1);
+
+  .article__container--sidebar {
+    box-shadow: 0 0.1rem 0.2rem rgba($input-color, 0.3);
+
+    .article__nav.explore {
+      .btn {
+        margin-bottom: 0.1rem;
+        border: 1px solid rgba($black-color, 0.2);
+      }
+    }
+  }
+}
+
+// Thank you page
+.thank-container {
+  background-color: $secondary-color;
+  .center-container {
+    background-color: $primary-color;
+    color: $black-color;
+    border: 1px solid rgba($black-color, 0.1);
+    .primary--header {
+      &::after {
+        background-color: $black-color;
+      }
+    }
+  }
+
+  .btn {
+    background-color: $primary-color;
+    color: $black-color;
+  }
+}
