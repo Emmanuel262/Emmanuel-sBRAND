@@ -190,6 +190,13 @@ function dataToUpload() {
   };
 }
 
+createAndEditForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const token = Cookies.get("jwt");
+  createData(token, glabFormData());
+  createAndEditForm.reset();
+});
+
 function createData(token, data) {
   const formData = new FormData();
   formData.append("articleTitle", data.articleTitle);
@@ -198,6 +205,7 @@ function createData(token, data) {
   for (let i = 0; i < articlePhoto.length; i++) {
     formData.append("article_photos", articlePhoto[i]);
   }
+  showSpinner();
   fetch(url, {
     method: "POST",
     credentials: "same-origin",
@@ -208,6 +216,7 @@ function createData(token, data) {
   })
     .then((res) => res.json())
     .then((data) => {
+      hideSpinner();
       window.location.reload();
     })
     .catch((err) => console.log(err));
