@@ -55,10 +55,10 @@ fetch(url)
               </p>
               <div class="btn-types">
                 <button class="btn btn__read read-article-btn" data-id="${dat._id}">Read</button>
-                <button class="btn btn__edit edit-article" data-id="${dat._id}" data-name="${dat.articleTitle}"
+                <button class="btn btn__edit edit-article" id="edit-article-req-btn" data-id="${dat._id}" data-name="${dat.articleTitle}"
                   >Edit</button
                 >
-                <button class="btn btn__delete">Delete</button>
+                <button class="btn btn__delete" id="edit-article-req-btn">Delete</button>
               </div>
               <div class="card__confirm-delete">
                 <h6 class="secondary--text">Are you sure about deleting????</h6>
@@ -82,15 +82,28 @@ function cardListFunc(cardList) {
   cardList.forEach((card) => {
     const deleteBtn = card.querySelector(".btn__delete");
     const cardConfirm = card.querySelector(".card__confirm-delete");
+    const cancelBtn = cardConfirm.querySelector(".btn__create");
+    const deleteConfirmBtn = cardConfirm.querySelector(".btn__delete");
+    const editBtn = card.querySelector(".edit-article");
+    const readArticleBtn = card.querySelector(".read-article-btn");
+
+    const cookie = Cookies.get("jwt");
+    if (cookie) {
+      deleteBtn.style.display = "block";
+      editBtn.style.display = "block";
+      deleteConfirmBtn.style.display = "block";
+      deleteConfirmBtn.classList.add("active");
+    } else {
+      deleteBtn.style.display = "none";
+      editBtn.style.display = "none";
+    }
+
     deleteBtn.addEventListener("click", () => {
       cardConfirm.classList.add("active");
     });
-    const cancelBtn = cardConfirm.querySelector(".btn__create");
     cancelBtn.addEventListener("click", () => {
       cardConfirm.classList.remove("active");
     });
-    const deleteConfirmBtn = cardConfirm.querySelector(".btn__delete");
-    const editBtn = card.querySelector(".edit-article");
     deleteConfirmBtn.addEventListener("click", (e) => {
       let id = e.target.getAttribute("data-id");
       let imgName = e.target.getAttribute("data-name").split(".")[0];
@@ -98,8 +111,6 @@ function cardListFunc(cardList) {
       deleteData(token, id);
       card.classList.add("remove");
     });
-
-    const readArticleBtn = card.querySelector(".read-article-btn");
 
     readArticleBtn.addEventListener("click", (e) => {
       let id = e.target.getAttribute("data-id");
@@ -116,6 +127,7 @@ function cardListFunc(cardList) {
     });
 
     editBtn.addEventListener("click", (e) => {
+      console.log(e, "clicked");
       updateAndCreateContainer.classList.add("active");
       let id = e.target.getAttribute("data-id");
       let articleName = e.target.getAttribute("data-name").split(".")[0];
@@ -126,6 +138,28 @@ function cardListFunc(cardList) {
       submitFormFunc(true, id, articleName);
     });
   });
+}
+function updateData(token, data, id) {
+  const formData = new FormData();
+  formData.append("articleTitle", data.articleTitle);
+  formData.append("summary", data.summary);
+  formData.append("description", data.description);
+  for (let i = 0; i < articlePhoto.length; i++) {
+    formData.append("article_photos", articlePhoto[i]);
+  }
+  fetch(`${url}/${id}`, {
+    method: "PATCH",
+    credentials: "same-origin",
+    headers: new Headers({
+      Authorization: `Bearer ${token}`,
+    }),
+    body: formData,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      window.location.reload();
+    })
+    .catch((err) => console.log(err));
 }
 function getCookie(name) {
   var nameEQ = name + "=";

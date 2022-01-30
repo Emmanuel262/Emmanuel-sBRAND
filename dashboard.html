@@ -14,6 +14,9 @@
     <title>Emmanuel's Brand</title>
   </head>
   <body>
+    <div class="loader-container loader-hide">
+      <div class="loader" id="loader"></div>
+    </div>
     <header class="header">
       <nav class="header__nav">
         <div class="header__nav--container">
@@ -28,6 +31,7 @@
           <img src="./dist/img/bars.svg" alt="" />
         </button>
         <div class="user-btns">
+          <button class="header__nav--item btn btn__login">Login</button>
           <a href="#" class="header__nav--item btn user-dashboard">
             Dashboard
           </a>
@@ -36,7 +40,8 @@
       </nav>
       <div class="header__intro dashboard">
         <h5 class="primary--header">
-          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer
+          Junior.
         </h5>
       </div>
 
@@ -182,8 +187,12 @@
       <form class="dashboard--container profile-edit" id="blog-create-edit">
         <h1 class="primary--header">Edit article to meet your needs</h1>
         <div class="image-edit__container">
-          <!-- <input type="file" name="inpFile" id="inptFile" /> -->
-          <button type="button" class="inptFile" id="inptFile">
+          <input type="file" name="inpFile" id="inptFile" multiple />
+          <div class="files-to-upload">
+            <p>file one</p>
+            <p>file two</p>
+          </div>
+          <!-- <button type="button" class="inptFile" id="inptFile">
             Select image
           </button>
           <button type="button" class="upload-test" id="upload-test">
@@ -197,7 +206,7 @@
               id="image-preview__image"
             />
             <span class="image-preview__default-text">Image Preview</span>
-          </div>
+          </div> -->
         </div>
         <div class="text-edit__container">
           <input
@@ -214,11 +223,9 @@
           >
           </textarea>
         </div>
-        <a
-          href="./dashboard.html"
-          class="btn btn__create move-position back-btn-dash"
-          >Back</a
-        >
+        <button class="btn btn__create move-position back-btn-dash">
+          Back
+        </button>
         <button
           type="submit"
           class="btn btn__create dashboard--update-btn"
@@ -318,9 +325,14 @@
       src="https://cdn.tiny.cloud/1/uxw88gysnnwhadan1yuu73x45eg9mypgqxfejq6e81gp32l3/tinymce/5/tinymce.min.js"
       referrerpolicy="origin"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>
     <script src="./dist/js/tinyMCE.js"></script>
-    <script src="./dist/js/views.js"></script>
+    <!-- <script src="./dist/js/views.js"></script> -->
     <script src="./dist/js/user-dashboard.js"></script>
     <!-- <script src="./dist/js/fileInput.js"></script> -->
   </body>
 </html>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam. Lorem ipsum
+dolor sit amet, consectetur adipisicing elit. Molestiae, maxime. Cumque, debitis
+vel qui dolorem excepturi eaque! Est, voluptatibus veniam.

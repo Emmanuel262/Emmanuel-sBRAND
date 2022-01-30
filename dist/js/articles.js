@@ -6,10 +6,8 @@ const articleContainerContent = document.querySelector(
 );
 const articleComments = document.querySelector(".article__comments--comments");
 const articleCommentForm = document.getElementById("comment-on-article");
-// window.addEventListener("load", (e) => {
-//   console.log("page is full loaded");
-//   bringData(`${url}/${queryString}`);
-// });
+const spinnerCont = document.querySelector(".loader-container");
+
 window.onload = (e) => {
   console.log("page is full loaded");
   bringData(`${url}/${queryString}`);
@@ -23,7 +21,15 @@ articleCommentForm.addEventListener("submit", (e) => {
   ClearFormData(articleCommentForm);
 });
 
+function showSpinner() {
+  spinnerCont.classList.remove("loader-hide");
+}
+function hideSpinner() {
+  spinnerCont.classList.add("loader-hide");
+}
+
 function bringData(inputUrl) {
+  showSpinner();
   fetch(inputUrl)
     .then((res) => res.json())
     .then((data) => {
@@ -33,6 +39,7 @@ function bringData(inputUrl) {
       da.comments.forEach((comment) => {
         articleComments.innerHTML += insertComent(comment);
       });
+      hideSpinner();
     })
     .catch((err) => {
       console.log(err);
@@ -40,28 +47,26 @@ function bringData(inputUrl) {
 }
 
 function insertData(dat) {
+  let pictures = [];
+  dat.article_photos.forEach((photo) => {
+    pictures.push(`
+    <div class="img-one">
+    <img
+        src="${photo}"
+        alt="Article image 1"
+        class="article-img"
+    />
+    <small>${dat.articleTitle}</small>
+    </div>
+    `);
+  });
   const data = `
         <h5 class="primary--header">${dat.articleTitle}</h5>
         <p class="secondary--text">
         ${dat.summary}
         </p>
         <div class="article__container--images">
-            <div class="img-one">
-            <img
-                src="./dist/img/image-1.jpg"
-                alt="Article image 1"
-                class="article-img"
-            />
-            <small>image-1 description</small>
-            </div>
-            <div class="img-one">
-            <img
-                src="./dist/img/image-1.jpg"
-                alt="Article image 1"
-                class="article-img"
-            />
-            <small>image-1 description</small>
-            </div>
+            ${pictures}
         </div>
         <p class="secondary--text">
         ${dat.description}
@@ -104,6 +109,7 @@ function sendComment(id, datas) {
     email: datas.email,
     comment: datas.comment,
   };
+  showSpinner();
   fetch(`${urlc}/${id}`, {
     method: "POST", // or 'PUT'
     headers: {
@@ -114,6 +120,7 @@ function sendComment(id, datas) {
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
+      hideSpinner();
     })
     .catch((error) => {
       console.error("Error:", error);
