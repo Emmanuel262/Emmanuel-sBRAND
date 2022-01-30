@@ -15,6 +15,9 @@
     <title>Emmanuel's Brand</title>
   </head>
   <body>
+    <div class="loader-container loader-hide">
+      <div class="loader " id="loader"></div>
+    </div>
     <header class="header">
       <nav class="header__nav">
         <div class="header__nav--container">
@@ -23,7 +26,7 @@
           <a href="#experience-sec" class="header__nav--item btn">Experience</a>
           <a href="#projects-sec" class="header__nav--item btn">Projects</a>
           <a href="#contact-sec" class="header__nav--item btn">Contact</a>
-          <a href="./articles.html" class="header__nav--item btn">Articles</a>
+          <a href="./dashboard.html" class="header__nav--item btn">Articles</a>
         </div>
         <button class="btn" id="btn-deactive">
           <img src="./dist/img/bars.svg" alt="" />
@@ -32,7 +35,7 @@
           <button class="header__nav--item btn btn__login">
             Login
           </button>
-          <a href="#" class="header__nav--item btn user-dashboard">
+          <a href="./dashboard.html" class="header__nav--item btn user-dashboard">
             Dashboard
           </a>
           <button class="header__nav--item btn user-logout">
@@ -42,7 +45,7 @@
       </nav>
       <div class="header__intro">
         <h5 class="primary--header">
-          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer Junior.
         </h5>
       </div>
 
@@ -605,7 +608,7 @@
           </p>
         </div>
         <div class="right-div">
-          <form class="form">
+          <form class="form" id="query-contact-form">
             <div class="form-group">
               <label for="name" class="form-group__label">Your name</label>
               <input
@@ -620,7 +623,7 @@
               <input
                 type="email"
                 name="email"
-                id="email"
+                id="emailM"
                 class="form-group__input"
               />
             </div>
@@ -728,14 +731,8 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
-    <script src="./dist/js/firebaseConf.js"></script>
-    <script src="./dist/js/authentication.js"></script>
-    <script src="./dist/js/database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>
     <script src="./dist/js/main.js"></script>
+    <script src="./dist/js/query.js"></script>
   </body>
 </html>

@@ -14,6 +14,9 @@
     <title>Articles provided by Emmanuel</title>
   </head>
   <body>
+    <div class="loader-container loader-hide">
+      <div class="loader" id="loader"></div>
+    </div>
     <header class="header">
       <nav class="header__nav">
         <div class="header__nav--container">
@@ -60,58 +63,7 @@
         </div>
         <div class="article__container">
           <div class="article__container--article">
-            <h5 class="primary--header">Article #1</h5>
-            <p class="secondary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-              at ut sed enim imperdiet viverra sociis. Auctor sed mi neque sed
-              velit, in luctus ut porttitor. Adipiscing erat nulla nullam vitae
-              sed at quisque magna viverra. Eu eget neque consequat amet orci
-              hendrerit lorem vitae. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Arcu sed at ut sed enim imperdiet viverra sociis.
-              Auctor sed mi neque sed velit, in luctus ut porttitor. Adipiscing
-              erat nulla nullam vitae sed at quisque magna viverra. Eu eget
-              neque consequat amet orci hendrerit lorem vitae.
-            </p>
-            <div class="article__container--images">
-              <div class="img-one">
-                <img
-                  src="./dist/img/image-1.jpg"
-                  alt="Article image 1"
-                  class="article-img"
-                />
-                <small>image-1 description</small>
-              </div>
-              <div class="img-one">
-                <img
-                  src="./dist/img/image-1.jpg"
-                  alt="Article image 1"
-                  class="article-img"
-                />
-                <small>image-1 description</small>
-              </div>
-            </div>
-            <p class="secondary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-              at ut sed enim imperdiet viverra sociis. Auctor sed mi neque sed
-              velit, in luctus ut porttitor. Adipiscing erat nulla nullam vitae
-              sed at quisque magna viverra. Eu eget neque consequat amet orci
-              hendrerit lorem vitae. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Arcu sed at ut sed enim imperdiet viverra sociis.
-              Auctor sed mi neque sed velit, in luctus ut porttitor. Adipiscing
-              erat nulla nullam vitae sed at quisque magna viverra. Eu eget
-              neque consequat amet orci hendrerit lorem vitae.
-            </p>
-            <p class="secondary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-              at ut sed enim imperdiet viverra sociis. Auctor sed mi neque sed
-              velit, in luctus ut porttitor. Adipiscing erat nulla nullam vitae
-              sed at quisque magna viverra. Eu eget neque consequat amet orci
-              hendrerit lorem vitae. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Arcu sed at ut sed enim imperdiet viverra sociis.
-              Auctor sed mi neque sed velit, in luctus ut porttitor. Adipiscing
-              erat nulla nullam vitae sed at quisque magna viverra. Eu eget
-              neque consequat amet orci hendrerit lorem vitae.
-            </p>
+            <div class="article__container--article-content"></div>
 
             <div class="article__directions">
               <a href="#" class="btn btn__primary">1</a>
@@ -123,7 +75,7 @@
             <div class="article__comments">
               <div class="article__comments--leave">
                 <h6 class="secondary--header">Leave comment</h6>
-                <form class="form">
+                <form class="form" id="comment-on-article">
                   <div class="form-group">
                     <label for="name" class="form-group__label"
                       >Your name</label
@@ -164,42 +116,6 @@
               </div>
               <div class="article__comments--comments">
                 <h6 class="secondary--header">Comments</h6>
-                <div class="comment">
-                  <h5 class="secondary--header">ASIFIWE Emmanuel</h5>
-                  <p class="secondary--text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Arcu sed at ut sed enim imperdiet viverra sociis.
-                  </p>
-                </div>
-                <div class="comment">
-                  <h5 class="secondary--header">ASIFIWE Emmanuel</h5>
-                  <p class="secondary--text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Arcu sed at ut sed enim imperdiet viverra sociis.
-                  </p>
-                </div>
-                <div class="comment">
-                  <h5 class="secondary--header">ASIFIWE Emmanuel</h5>
-                  <p class="secondary--text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Arcu sed at ut sed enim imperdiet viverra sociis.
-                  </p>
-                </div>
-                <div class="comment">
-                  <h5 class="secondary--header">ASIFIWE Emmanuel</h5>
-                  <p class="secondary--text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Arcu sed at ut sed enim imperdiet viverra sociis.
-                  </p>
-                </div>
-                <div class="comment">
-                  <h5 class="secondary--header">ASIFIWE Emmanuel</h5>
-                  <p class="secondary--text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Arcu sed at ut sed enim imperdiet viverra sociis.
-                  </p>
-                </div>
-                <a href="#" class="btn btn__primary">More comments</a>
               </div>
             </div>
           </div>
@@ -379,12 +295,7 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-    <script src="./dist/js/firebaseConf.js"></script>
     <script src="./dist/js/articles.js"></script>
-    <script src="./dist/js/main.js"></script>
+    <!-- <script src="./dist/js/main.js"></script> -->
   </body>
 </html>

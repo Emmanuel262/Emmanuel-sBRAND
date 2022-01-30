@@ -31,10 +31,34 @@ input.type = "file";
 let files = [];
 // End of file references
 
+fetch(url)
+  .then((res) => res.json())
+  .then((data) => data.articles)
+  .then((dats) => {
+    dats.forEach((dat) => {
+      console.log(dat);
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
 auth.onAuthStateChanged((user) => {
   if (user) {
     logoutBtn.classList.add("active");
     dashboardData.classList.add("active");
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => data.articles)
+      .then((dats) => {
+        dats.forEach((dat) => {
+          console.log(dat);
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     db.collection("articles")
       .get()
       .then((snapshot) => {
@@ -54,7 +78,7 @@ auth.onAuthStateChanged((user) => {
                 <a href="./articles.html" class="btn btn__read">Read</a>
                 <button class="btn btn__edit edit-article" data-id="${
                   d.id
-                }" data-name="${d.data().articleImgName}" 
+                }" data-name="${d.data().articleImgName}"
                   >Edit</button
                 >
                 <button class="btn btn__delete">Delete</button>
